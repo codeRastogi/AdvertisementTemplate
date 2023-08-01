@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(52, 55, 58);
+    
+}
+header {
+    text-align: center;
+    width: 100%;
+    margin: 5% 0% 10% 0%;
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Set the video element to be behind other content */
+    opacity: 0.5;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#logo {
+   width: 15%;
+}
+#banner {
+    width: 100%;
+    height: auto;
+}
+#posters {
+    display: flex;
+    padding-left: 10%;
+    justify-content:center;
+    margin-top: 15%;
+}
+.poster {
+    width: 80%;
+    height: auto;
+}
+
+.hover-enlarge {
+    /* Set the initial transition for a smooth effect */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+.hover-enlarge:hover {
+    /* Enlarge the image */
+    transform: scale(1.1);
+    /* Add a blur effect to the background (requires browser support) */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); 
+  }
+
+
+/* ------slide-animation------ */
+
+.slide-animation {
+    /* Set the initial position */
+    transform: translateX(0);
+    transition: ease-in-out;
+
+    /* Set the animation to repeat infinitely */
+    animation: slideLoop 5s infinite;
+  }
+  
+  /* Define the @keyframes rule for the continuous sliding animation */
+  @keyframes slideLoop {
+    0% {
+      /* Starting position */
+      transform: translateX(-102%);
+    }
+    100% {
+      /* Ending position */
+      transform: translateX(102%);
+    }
+  }
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.logo-container:hover .horizontal-list {
+  display: block;
+}
+
+.horizontal-list {
+  list-style: none;
+  padding-left: 10px;
+  margin: 0px;
+  display: none;
+}
+
+.horizontal-list li {
+  display: inline-block;
+  margin: 0px 8px 8px 0px;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.horizontal-list li a {
+  color: rgb(70, 5, 5);
+  text-decoration: none;
+}
+
+.horizontal-list li:hover {
+  background-color: #b6aeae;
+}
+
+  
+  
