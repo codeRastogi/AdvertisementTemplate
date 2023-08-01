@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden !important;
+    overflow-x: hidden !important; 
     background-color: rgb(52, 55, 58);
     
 }
@@ -51,26 +51,15 @@ section {
 }
 #posters {
     display: flex;
-    padding-left: 10%;
+    padding-left: 2.5%;
     justify-content:center;
     margin-top: 15%;
 }
 .poster {
-    width: 80%;
+    width: 95%;
     height: auto;
 }
 
-.hover-enlarge {
-    /* Set the initial transition for a smooth effect */
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-.hover-enlarge:hover {
-    /* Enlarge the image */
-    transform: scale(1.1);
-    /* Add a blur effect to the background (requires browser support) */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); 
-  }
 
 
 /* ------slide-animation------ */
@@ -94,6 +83,13 @@ section {
       /* Ending position */
       transform: translateX(102%);
     }
+  }
+
+  .slide-animation:hover{
+    animation: none;
+    transform: scale(1.1) ;
+    transition: ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
   }
 
 .logo-container {
@@ -129,5 +125,16 @@ section {
   background-color: #b6aeae;
 }
 
-  
+.hover-enlarge {
+  /* Set the initial transition for a smooth effect */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hover-enlarge:hover {
+  /* Enlarge the image */
+  transform: scale(1.1);
+  /* Add a blur effect to the background (requires browser support) */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); 
+}
+
   
